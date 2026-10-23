@@ -5,10 +5,10 @@ bool isSorted(int arr[], int n) {
     //caso base: queda 1 o ningún elemento por analizar
     if (n <= 1 ) return true;
 
-    //caso recursivo: compara el elemento actual con el anterior
+    //caso recursivo: compara el elemento actual considerado con el anterior
     if (arr[n - 2] > arr[n - 1]) return false;
 
-    return isSorted(arr, n - 1); //llamada recurisva, reduce el tamaño en 1 por lo que se aproxima al caso base
+    return isSorted(arr, n - 1); //llamada recursiva, reduce el tamaño en 1 por lo que se aproxima al caso base
 }
 
 int main() {
@@ -25,5 +25,5 @@ int main() {
     cout << "¿El array 2 está ordenado? " << boolalpha << r2 << '\n';
     cout << "¿El array 3 está ordenado? " << boolalpha << r3 << '\n';
 
-    
+    return 0;
 }
